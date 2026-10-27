@@ -16,18 +16,14 @@
     --accent: #7cf5d6;
     --accent-2: #ff6b3d;
   }
-  @media (prefers-color-scheme: light) {
-    :root {
-      --bg: #f2f3f7;
-      --panel: #ffffff;
-      --line: #d9dce6;
-      --text: #12151c;
-      --muted: #5b6275;
-      --accent: #0a7f68;
-      --accent-2: #c2410c;
-    }
-  }
   * { box-sizing: border-box; }
+  body::before {
+    content: "";
+    position: fixed; inset: 0; z-index: -1;
+    background:
+      linear-gradient(rgba(11,13,18,.45), rgba(11,13,18,.82)),
+      url("bg.jpg") center / cover no-repeat;
+  }
   body {
     margin: 0;
     background: var(--bg);
